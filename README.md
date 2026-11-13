@@ -210,6 +210,7 @@ Here are some examples:
   within a new temporary directory.
 * `null`: Use the defaults for files and directories (prefixes `"f-"`
   and `"d-"`, respectively, no suffixes).
+* `{mode: 0o711}` Request mode 0o711 when creating files or directories.
 
 In this simple example we read a `pdf`, write it to a temporary file with
 a `.pdf` extension, and close it.
@@ -266,6 +267,7 @@ interface AffixOptions {
 	prefix?: string;
 	suffix?: string;
 	dir?: string;
+  mode?: string | number;
 }
 
 function track(value?: boolean): typeof temp;
